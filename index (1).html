@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203f38">
+  <meta name="description" content="Bài cảm nhận sách Kinh doanh thời trang của sinh viên Đào Huy Hoàng.">
+  <title>Cảm nhận sách Kinh doanh thời trang | Đào Huy Hoàng</title>
+  <style>
+    :root {
+      --forest:#203f38; --forest-2:#294f46; --ink:#26332f; --muted:#68746e;
+      --paper:#f8f6ef; --cream:#eeeade; --gold:#c2a36b; --line:#dedbcf;
+      --white:#fffefa; --shadow:0 18px 55px rgba(32,63,56,.09);
+    }
+    * {box-sizing:border-box}
+    html {scroll-behavior:smooth; scroll-padding-top:92px}
+    body {margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.82}
+    a {color:inherit}
+    .topbar {position:sticky;top:0;z-index:20;background:rgba(248,246,239,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-wrap {width:min(1160px,calc(100% - 44px));margin:auto;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand {display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--forest);font:700 11px/1.3 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+    .brand-mark {width:35px;height:35px;display:grid;place-items:center;background:var(--forest);color:#f5eddb;font:italic 22px Georgia,serif;border-radius:2px}
+    .nav-links {display:flex;align-items:center;gap:25px;font:600 12px Arial,sans-serif;color:#65716b}
+    .nav-links a {text-decoration:none;transition:color .2s}
+    .nav-links a:hover {color:var(--gold)}
+    .hero {position:relative;overflow:hidden;background:linear-gradient(118deg,#19372f 0%,#294f46 66%,#345b4e 100%);color:#f8f5eb}
+    .hero:after {content:'READ';position:absolute;right:-22px;bottom:-100px;color:rgba(255,255,255,.045);font:700 clamp(130px,25vw,330px)/1 Georgia,serif;letter-spacing:-.07em;pointer-events:none}
+    .hero-inner {position:relative;z-index:1;width:min(1160px,calc(100% - 44px));margin:auto;padding:100px 0 108px}
+    .eyebrow {font:700 10px Arial,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#d2b77f}
+    .hero h1 {max-width:850px;margin:23px 0 18px;font:500 clamp(48px,8vw,91px)/1.02 Georgia,serif;letter-spacing:-.045em}
+    .hero h1 em {color:#d7bd8b;font-weight:400}
+    .hero-desc {max-width:620px;color:#dbe2d9;font-size:17px;line-height:1.8}
+    .hero-meta {display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:32px;color:#e3e5dc;font:12px Arial,sans-serif;letter-spacing:.04em}
+    .hero-meta span:before {content:'•';color:var(--gold);margin-right:9px}
+    .hero-cta {display:inline-flex;align-items:center;gap:28px;margin-top:35px;padding:12px 17px;border:1px solid rgba(255,255,255,.42);text-decoration:none;font:600 12px Arial,sans-serif;letter-spacing:.04em;transition:.2s}
+    .hero-cta:hover {background:#f8f5eb;color:var(--forest)}
+    .container {width:min(1060px,calc(100% - 44px));margin:auto}
+    .intro-grid {display:grid;grid-template-columns:290px 1fr;gap:clamp(40px,8vw,100px);align-items:center;padding:105px 0}
+    .book-card {min-height:405px;padding:27px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(150deg,#31594e,#18352e);color:#f8f1df;box-shadow:14px 16px 0 #e7e1d3,0 24px 45px rgba(24,53,46,.16);border-left:7px solid #b89b66}
+    .book-small {font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#d8c69f}
+    .book-name {font:500 39px/1.13 Georgia,serif}
+    .book-name em {color:#d4b77d}
+    .book-rule {width:52px;height:2px;background:var(--gold)}
+    .book-author {font:12px Arial,sans-serif;letter-spacing:.12em}
+    .section-kicker {font:700 10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#a88750}
+    .intro-copy h2,.section-title {margin:12px 0 22px;color:var(--forest);font:500 clamp(34px,4.5vw,52px)/1.16 Georgia,serif;letter-spacing:-.025em}
+    .intro-copy p {margin:0 0 16px;color:#5d6963;font-size:16px}
+    .intro-quote {margin:27px 0 0;padding:5px 0 5px 22px;border-left:3px solid var(--gold);color:var(--forest);font:italic 21px/1.55 Georgia,serif}
+    .article-area {padding:78px 0 105px;background:#f0ede3;border-top:1px solid #e7e2d6;border-bottom:1px solid #e7e2d6}
+    .article-heading {max-width:760px;margin-bottom:48px}
+    .article-heading p {color:var(--muted);font-size:15px}
+    .article-layout {display:grid;grid-template-columns:245px minmax(0,1fr);gap:55px;align-items:start}
+    .toc {position:sticky;top:98px;max-height:calc(100vh - 120px);overflow:auto;padding:22px;background:rgba(255,254,250,.72);border:1px solid #e0dccf}
+    .toc-title {display:block;margin-bottom:15px;color:#a88750;font:700 10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+    .toc a {display:grid;grid-template-columns:25px 1fr;gap:7px;padding:9px 0;border-bottom:1px solid #e9e5da;text-decoration:none;color:#68736d;font:12px/1.45 Arial,sans-serif}
+    .toc a span {color:#b0935e;font-weight:700}
+    .toc a:hover {color:var(--forest)}
+    .article {min-width:0;padding:clamp(24px,4vw,55px);background:var(--white);box-shadow:var(--shadow)}
+    .article h1 {margin:0 0 20px;color:var(--forest);font:500 32px/1.2 Georgia,serif}
+    .article h2 {margin:55px 0 22px;padding-top:12px;color:var(--forest);font:500 clamp(25px,3vw,35px)/1.25 Georgia,serif;scroll-margin-top:95px}
+    .article h2:first-of-type {margin-top:0}
+    .article h3 {margin:43px 0 17px;padding-top:25px;border-top:1px solid var(--line);color:var(--forest);font:600 clamp(21px,2.5vw,27px)/1.35 Georgia,serif;scroll-margin-top:95px}
+    .article p {margin:0 0 18px;color:#4f5c56;font-size:16px}
+    .article strong {color:#314b40;font-weight:700}
+    .article h2#ket-luan {margin-top:65px;padding:28px 0 0;border-top:2px solid var(--gold)}
+    .article h2#ket-luan + p {font-size:16px}
+    .article blockquote {margin:27px 0;padding:18px 23px;background:#f2efe5;border-left:3px solid var(--gold);color:var(--forest);font:italic 19px/1.6 Georgia,serif}
+    .closing {padding:84px 22px;background:var(--forest);color:#f7f3e8}
+    .closing-inner {width:min(850px,100%);margin:auto;text-align:center}
+    .closing .section-kicker {color:#d4b77d}
+    .closing h2 {margin:13px 0 18px;font:500 clamp(34px,5vw,56px)/1.15 Georgia,serif}
+    .closing p {margin:0;color:#dbe1d9;font-size:15px}
+    footer {display:flex;justify-content:space-between;gap:18px;align-items:center;padding:24px max(22px,calc((100% - 1160px)/2));background:#172f29;color:#d8dfd7;font:11px Arial,sans-serif;letter-spacing:.08em}
+    footer strong {color:#e2c995;font-weight:600}
+    @media(max-width:800px) {
+      .nav-wrap {padding:13px 0;align-items:flex-start;flex-direction:column;gap:10px}
+      .nav-links {width:100%;gap:0;justify-content:space-between;flex-wrap:wrap}
+      .nav-links a {font-size:11px}
+      .hero-inner {padding:76px 0 82px}
+      .intro-grid {grid-template-columns:1fr;padding:72px 0;gap:48px}
+      .book-card {width:min(290px,85%);min-height:360px;margin:auto}
+      .article-layout {grid-template-columns:1fr;gap:25px}
+      .toc {position:static;max-height:260px;display:grid;grid-template-columns:1fr 1fr;gap:0 15px}
+      .toc-title {grid-column:1/-1}
+      .article-area {padding:65px 0}
+    }
+    @media(max-width:480px) {
+      .container,.nav-wrap,.hero-inner {width:calc(100% - 34px)}
+      .hero h1 {font-size:48px}
+      .hero-desc {font-size:15px}
+      .nav-links {gap:9px 14px;justify-content:flex-start}
+      .nav-links a {font-size:10px}
+      .toc {grid-template-columns:1fr}
+      .article {padding:23px 19px}
+      .article p {font-size:15px}
+      footer {align-items:flex-start;flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce) {html {scroll-behavior:auto} * {transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="brand" href="#trang-chu"><span class="brand-mark">H</span><span>Reading Journal<br>Đào Huy Hoàng</span></a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#gioi-thieu">Giới thiệu sách</a><a href="#mo-dau">Mở đầu</a><a href="#cam-nhan">10 chương</a><a href="#ket-luan">Kết luận</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="trang-chu">
+      <div class="hero-inner">
+        <div class="eyebrow">Bài cảm nhận sách · Ngành Truyền thông số</div>
+        <h1>Kinh doanh<br><em>thời trang.</em></h1>
+        <p class="hero-desc">Bài cảm nhận sách “Kinh doanh thời trang” — tác giả Trần Viết Hưng.</p>
+        <div class="hero-meta"><span>Đào Huy Hoàng</span><span>Mã số: 24030287</span><span>Tác giả: Trần Viết Hưng</span></div>
+        <a class="hero-cta" href="#gioi-thieu">Bắt đầu đọc <span aria-hidden="true">↘</span></a>
+      </div>
+    </section>
+
+    <section class="container intro-grid" id="gioi-thieu">
+      <div class="book-card" aria-label="Thiết kế bìa giới thiệu cuốn sách Kinh doanh thời trang">
+        <div class="book-small">Góc đọc · Kinh doanh</div>
+        <div><div class="book-rule"></div><div class="book-name">Kinh doanh<br><em>thời trang</em></div></div>
+        <div class="book-author">TRẦN VIẾT HƯNG</div>
+      </div>
+      <div class="intro-copy">
+        <div class="section-kicker">Cuốn sách được cảm nhận</div>
+        <h2>Hiểu kinh doanh<br>từ góc nhìn truyền thông.</h2>
+
+      </div>
+    </section>
+
+    <section class="article-area">
+      <div class="container">
+        <div class="article-heading">
+          <div class="section-kicker">Nội dung bài viết</div>
+          <h2 class="section-title">Hành trình cảm nhận<br>qua từng chương sách</h2>
+          <p>Bài viết được trình bày đầy đủ theo tài liệu gốc, với mục lục giúp bạn dễ dàng chuyển đến từng phần.</p>
+        </div>
+        <div class="article-layout">
+          <aside class="toc" aria-label="Mục lục bài viết">
+            <span class="toc-title">Mục lục · 10 chương</span>
+            <a href="#mo-dau"><span>00</span>Mở đầu</a>
+            <a href="#gioi-thieu"><span>—</span>Giới thiệu sách</a>
+            <a href="#chuong-1"><span>01</span>Con nhà nông thành công mở shop</a>
+<a href="#chuong-2"><span>02</span>Thời điểm vàng chừng nào mới đến</a>
+<a href="#chuong-3"><span>03</span>Tập trung hiểu khách, bán một lời mười</a>
+<a href="#chuong-4"><span>04</span>Sản phẩm tốt là sản phẩm bán chạy</a>
+<a href="#chuong-5"><span>05</span>Thoát khỏi ma trận nguồn hàng</a>
+<a href="#chuong-6"><span>06</span>Khách hàng ở đâu, chọn kênh ở đó</a>
+<a href="#chuong-7"><span>07</span>Chinh phục khách hàng từ cái nhìn đầu tiên</a>
+<a href="#chuong-8"><span>08</span>Thương hiệu – đòn bẩy nâng bạn qua mọi giới hạn</a>
+<a href="#chuong-9"><span>09</span>Marketing – lấy ngắn nuôi dài</a>
+<a href="#chuong-10"><span>10</span>Phía sau cửa sổ trưng bày</a>
+            <a href="#ket-luan"><span>✓</span>Kết luận</a>
+          </aside>
+          <article class="article">
+            <p>Họ Và Tên: Đào Huy Hoàng
+Tác Giả: Trần Viết Hưng
+Tên Sách: Kinh Doanh Thời Trang</p>
+<h1 id="b-i-c-m-nh-n-s-ch-kinh-doanh-th-i-trang-tr-n-vi-t-h-ng">BÀI CẢM NHẬN SÁCH: KINH DOANH THỜI TRANG – TRẦN VIẾT HƯNG</h1>
+<h2 id="mo-dau">I. MỞ ĐẦU – LÝ DO EM LỰA CHỌN TÌM HIỂU CUỐN SÁCH</h2>
+<p>Là một sinh viên ngành Truyền thông số, em thường xuyên được tiếp xúc với những kiến thức liên quan đến truyền thông, marketing, xây dựng thương hiệu, sáng tạo nội dung và nghiên cứu hành vi khách hàng. Trước đây, khi nhắc đến kinh doanh thời trang, em thường nghĩ rằng đây là lĩnh vực chủ yếu đòi hỏi khả năng lựa chọn trang phục đẹp, nắm bắt xu hướng và có gu thẩm mỹ tốt. Tuy nhiên, sau khi tìm hiểu cuốn sách <strong>“Kinh doanh thời trang” của tác giả Trần Viết Hưng</strong>, em nhận ra rằng phía sau một cửa hàng thời trang thành công là cả một quá trình nghiên cứu, xây dựng chiến lược, quản lý và phát triển thương hiệu.</p>
+<p>Điều khiến em quan tâm đến cuốn sách này là sự kết nối giữa lĩnh vực kinh doanh thời trang và ngành học mà em đang theo đuổi. Trong thời đại công nghệ số, một thương hiệu thời trang không chỉ cần có sản phẩm chất lượng mà còn phải biết cách truyền tải hình ảnh, xây dựng câu chuyện thương hiệu và tạo sự kết nối với khách hàng thông qua các nền tảng trực tuyến như Facebook, TikTok, Instagram và các sàn thương mại điện tử.</p>
+<p>Với góc nhìn của một sinh viên Truyền thông số, em đặc biệt quan tâm đến cách một thương hiệu xác định khách hàng mục tiêu, tạo sự khác biệt so với đối thủ, xây dựng hình ảnh nhận diện và triển khai các hoạt động marketing. Đây cũng là những kiến thức có thể giúp em vận dụng vào công việc sau này, dù là làm truyền thông cho một doanh nghiệp hay tự xây dựng thương hiệu kinh doanh riêng.</p>
+<p>Qua việc tìm hiểu cuốn sách, em không chỉ mong muốn hiểu thêm về cách vận hành một cửa hàng thời trang mà còn muốn học được tư duy của một người làm kinh doanh: biết quan sát thị trường, thấu hiểu khách hàng, chủ động trước những thay đổi và kiên trì với mục tiêu của mình.</p>
+<h2 id="gioi-thieu-chi-tiet">II. GIỚI THIỆU KHÁI QUÁT VỀ CUỐN SÁCH</h2>
+<p>Cuốn sách <strong>“Kinh doanh thời trang” của tác giả Trần Viết Hưng</strong> là một tài liệu chia sẻ những kinh nghiệm và kiến thức thực tế dành cho những người có mong muốn bước chân vào lĩnh vực kinh doanh thời trang.</p>
+<p>Thông qua kinh nghiệm thực chiến của bản thân, tác giả giúp người đọc hình dung được quá trình xây dựng một cửa hàng thời trang, từ những bước đầu tiên như tìm hiểu thị trường, xác định khách hàng mục tiêu, lựa chọn sản phẩm, tìm nguồn hàng cho đến việc xây dựng thương hiệu, triển khai marketing và quản lý hoạt động kinh doanh.</p>
+<p>Điều em đánh giá cao là nội dung sách không chỉ tập trung vào việc làm thế nào để bán được nhiều quần áo mà còn hướng người đọc đến việc xây dựng một mô hình kinh doanh có khả năng phát triển lâu dài.</p>
+<p>Đối với em, đây là một cuốn sách có ý nghĩa thực tiễn vì giúp em hiểu rõ hơn mối liên hệ giữa kinh doanh, marketing và truyền thông trong lĩnh vực thời trang.</p>
+<h2 id="cam-nhan">III. CẢM NHẬN CHI TIẾT TỪNG CHƯƠNG</h2>
+<h3 id="chuong-1">CHƯƠNG 1: CON NHÀ NÔNG THÀNH CÔNG MỞ SHOP</h3>
+<p>Chương đầu tiên kể về hành trình của tác giả Trần Viết Hưng, từ một người có xuất phát điểm không thuộc lĩnh vực thời trang đến khi từng bước xây dựng sự nghiệp kinh doanh của riêng mình.</p>
+<p>Điều khiến em ấn tượng không phải chỉ là những thành công mà tác giả đạt được, mà chính là quá trình nỗ lực và học hỏi để đi đến thành công đó. Em nhận thấy rằng để kinh doanh thời trang, chúng ta không nhất thiết phải có sẵn kiến thức chuyên sâu về thiết kế hay có năng khiếu phối đồ. Điều quan trọng hơn là khả năng học hỏi, quan sát thị trường, hiểu khách hàng và không ngừng hoàn thiện bản thân.</p>
+<p>Với tư cách là một sinh viên, em đôi khi cũng lo lắng về việc bản thân chưa có đủ kinh nghiệm để thực hiện những dự định trong tương lai. Tuy nhiên, câu chuyện của tác giả khiến em hiểu rằng xuất phát điểm không quyết định hoàn toàn kết quả cuối cùng.</p>
+<p><strong>Bài học em rút ra:</strong> Thành công không nhất thiết bắt đầu từ những lợi thế lớn, mà có thể bắt đầu từ tinh thần dám thử, dám học hỏi và dám chịu trách nhiệm với lựa chọn của mình.</p>
+<h3 id="chuong-2">CHƯƠNG 2: THỜI ĐIỂM VÀNG CHỪNG NÀO MỚI ĐẾN</h3>
+<p>Chương này giúp em suy nghĩ nhiều hơn về tâm lý sợ thất bại khi bắt đầu kinh doanh. Nhiều người thường muốn chờ đến khi có đủ vốn, đủ kinh nghiệm hoặc thị trường ổn định mới bắt đầu thực hiện dự định của mình.</p>
+<p>Tuy nhiên, em nhận thấy rằng trong kinh doanh không có thời điểm nào hoàn toàn thuận lợi. Mỗi giai đoạn đều có những cơ hội và thách thức riêng. Nếu chỉ tập trung nhìn vào khó khăn, chúng ta sẽ dễ dàng bỏ qua những cơ hội có thể phát triển.</p>
+<p>Liên hệ với ngành Truyền thông số, em nghĩ rằng thị trường luôn thay đổi rất nhanh. Những xu hướng trên mạng xã hội có thể xuất hiện và biến mất trong thời gian ngắn. Vì vậy, người làm truyền thông cần chủ động cập nhật kiến thức, nắm bắt xu hướng và biết thích nghi với sự thay đổi.</p>
+<p>Tuy nhiên, em cũng cho rằng dám bắt đầu không đồng nghĩa với việc hành động thiếu suy nghĩ. Sự nhiệt huyết cần đi cùng kế hoạch và khả năng đánh giá rủi ro.</p>
+<p><strong>Bài học em rút ra:</strong> Đừng chờ đợi một thời điểm hoàn hảo mà hãy chủ động chuẩn bị kiến thức, kỹ năng và lựa chọn thời điểm phù hợp để hành động.</p>
+<h3 id="chuong-3">CHƯƠNG 3: TẬP TRUNG HIỂU KHÁCH, BÁN MỘT LỜI MƯỜI</h3>
+<p>Đây là một trong những chương em cảm thấy quan trọng nhất vì nội dung liên quan trực tiếp đến kiến thức nghiên cứu khách hàng trong ngành Truyền thông số.</p>
+<p>Trước đây, em thường nghĩ rằng kinh doanh thời trang đơn giản là tìm những mẫu quần áo đẹp, hợp xu hướng rồi đăng bán để thu hút khách hàng. Nhưng qua chương này, em nhận ra rằng sản phẩm đẹp chưa chắc đã là sản phẩm khách hàng cần.</p>
+<p>Một thương hiệu muốn phát triển phải hiểu khách hàng của mình là ai, họ có khả năng chi trả bao nhiêu, họ yêu thích phong cách nào và điều gì khiến họ quyết định mua hàng.</p>
+<p>Ví dụ, nếu hướng đến đối tượng sinh viên, cửa hàng cần quan tâm đến mức giá phù hợp, kiểu dáng trẻ trung, dễ phối đồ và tính ứng dụng cao. Trong khi đó, nhóm khách hàng đi làm có thể quan tâm nhiều hơn đến sự thanh lịch, chất liệu và độ bền.</p>
+<p>Từ góc nhìn chuyên ngành, em nhận thấy việc nghiên cứu insight khách hàng là một kỹ năng rất quan trọng. Khi hiểu được nhu cầu và tâm lý của khách hàng, người làm truyền thông mới có thể xây dựng nội dung quảng cáo phù hợp và tạo ra thông điệp có sức thuyết phục.</p>
+<p><strong>Bài học em rút ra:</strong> Muốn bán được hàng, trước tiên phải hiểu người mua. Hiểu khách hàng chính là nền tảng để xây dựng sản phẩm và chiến lược truyền thông hiệu quả.</p>
+<h3 id="chuong-4">CHƯƠNG 4: SẢN PHẨM TỐT LÀ SẢN PHẨM BÁN CHẠY</h3>
+<p>Chương này giúp em nhận ra rằng một sản phẩm tốt không chỉ được đánh giá qua vẻ ngoài mà còn phải đáp ứng được nhu cầu thực tế của khách hàng.</p>
+<p>Một chiếc áo có thiết kế đẹp, chất liệu tốt nhưng giá bán quá cao so với khả năng chi trả của khách hàng mục tiêu thì vẫn có thể khó tiêu thụ. Ngược lại, một sản phẩm có thiết kế đơn giản nhưng phù hợp với nhu cầu và phong cách sống của khách hàng vẫn có thể được lựa chọn nhiều.</p>
+<p>Em đặc biệt quan tâm đến câu hỏi: Tại sao khách hàng phải mua sản phẩm tại cửa hàng của mình thay vì lựa chọn một thương hiệu khác?</p>
+<p>Theo em, đây là vấn đề rất quan trọng trong môi trường cạnh tranh hiện nay. Khi có quá nhiều thương hiệu thời trang trên thị trường, việc tạo ra sự khác biệt là điều cần thiết để khách hàng ghi nhớ và lựa chọn.</p>
+<p>Liên hệ với Truyền thông số, em nhận thấy rằng một sản phẩm tốt cần được truyền tải bằng hình ảnh, video và nội dung phù hợp để khách hàng hiểu được giá trị mà sản phẩm mang lại.</p>
+<p><strong>Bài học em rút ra:</strong> Đừng chỉ tập trung tạo ra sản phẩm đẹp mà hãy tạo ra sản phẩm có giá trị thực tế, phù hợp với khách hàng và có lý do đủ thuyết phục để họ lựa chọn.</p>
+<h3 id="chuong-5">CHƯƠNG 5: THOÁT KHỎI MA TRẬN NGUỒN HÀNG</h3>
+<p>Đây là chương giúp em hiểu thêm về những khó khăn phía sau quá trình lựa chọn và nhập hàng trong kinh doanh thời trang.</p>
+<p>Nhiều người mới kinh doanh thường nghĩ rằng chỉ cần tìm được nguồn hàng giá rẻ là đã có lợi thế. Tuy nhiên, em nhận ra rằng giá rẻ không đồng nghĩa với hiệu quả kinh doanh.</p>
+<p>Nếu nhập hàng giá thấp nhưng chất lượng không ổn định, kích thước không đồng đều hoặc mẫu mã không phù hợp với khách hàng thì cửa hàng có thể gặp tình trạng tồn kho và mất uy tín.</p>
+<p>Theo em, người kinh doanh cần biết cân bằng giữa giá nhập, chất lượng, số lượng đặt hàng và khả năng tiêu thụ.</p>
+<p>Điều này cũng khiến em liên tưởng đến hoạt động xây dựng thương hiệu. Một thương hiệu có thể đầu tư rất nhiều vào hình ảnh quảng cáo, nhưng nếu sản phẩm thực tế không đáp ứng được kỳ vọng thì khách hàng sẽ dễ mất niềm tin.</p>
+<p><strong>Bài học em rút ra:</strong> Không nên lựa chọn nguồn hàng chỉ dựa vào giá rẻ. Chất lượng sản phẩm và sự uy tín mới là những yếu tố giúp doanh nghiệp duy trì khách hàng lâu dài.</p>
+<h3 id="chuong-6">CHƯƠNG 6: KHÁCH HÀNG Ở ĐÂU, CHỌN KÊNH Ở ĐÓ</h3>
+<p>Đây là chương có ý nghĩa đặc biệt đối với em vì nội dung liên quan trực tiếp đến truyền thông và các nền tảng kỹ thuật số.</p>
+<p>Trong thời đại công nghệ phát triển, hoạt động kinh doanh không còn giới hạn trong những cửa hàng truyền thống. Các nền tảng như Facebook, TikTok, Instagram và những sàn thương mại điện tử đã trở thành những kênh quan trọng giúp thương hiệu tiếp cận khách hàng.</p>
+<p>Em nhận thấy rằng không phải cứ bán hàng online là sẽ thành công, cũng không phải cứ mở cửa hàng ở vị trí đẹp là chắc chắn có khách.</p>
+<p>Mỗi kênh bán hàng đều có ưu điểm riêng. Online giúp cửa hàng tiếp cận nhiều khách hàng, quảng bá sản phẩm nhanh chóng và tiết kiệm một số chi phí. Offline lại giúp khách hàng trực tiếp xem chất liệu, thử trang phục và cảm nhận sản phẩm trước khi mua.</p>
+<p>Theo em, hướng đi phù hợp là kết hợp nhiều kênh bán hàng dựa trên thói quen mua sắm của khách hàng mục tiêu.</p>
+<p>Ví dụ, một thương hiệu thời trang dành cho sinh viên có thể sử dụng TikTok để đăng video phối đồ, Facebook để chăm sóc khách hàng, Instagram để xây dựng hình ảnh thương hiệu và các sàn thương mại điện tử để hỗ trợ hoạt động bán hàng.</p>
+<p><strong>Bài học em rút ra:</strong> Không nên chọn kênh truyền thông và bán hàng chỉ vì xu hướng. Hãy lựa chọn những kênh mà khách hàng mục tiêu thực sự sử dụng.</p>
+<h3 id="chuong-7">CHƯƠNG 7: CHINH PHỤC KHÁCH HÀNG TỪ CÁI NHÌN ĐẦU TIÊN</h3>
+<p>Chương này giúp em nhận ra rằng thời trang không chỉ nằm ở bản thân sản phẩm mà còn nằm trong trải nghiệm mà cửa hàng mang lại.</p>
+<p>Một cửa hàng được trang trí đẹp, ánh sáng hợp lý, sản phẩm được sắp xếp khoa học sẽ tạo cảm giác chuyên nghiệp và đáng tin cậy. Cách trưng bày sản phẩm cũng có thể tác động đến cảm xúc và hành vi mua sắm của khách hàng.</p>
+<p>Em đặc biệt thích cách nhìn nhận rằng cửa hàng không chỉ là nơi bán quần áo mà còn là nơi truyền tải phong cách sống và cá tính của thương hiệu.</p>
+<p>Liên hệ với ngành Truyền thông số, em nhận thấy hình ảnh là một yếu tố rất quan trọng trong việc tạo dựng ấn tượng thương hiệu. Từ hình ảnh sản phẩm, thiết kế poster, video quảng cáo đến cách bố trí không gian đều cần có sự thống nhất để tạo nên một bản sắc riêng.</p>
+<p><strong>Bài học em rút ra:</strong> Đừng chỉ bán quần áo, hãy bán cả trải nghiệm. Một không gian đẹp và cách trưng bày hợp lý có thể giúp khách hàng cảm thấy muốn khám phá và mua sắm nhiều hơn.</p>
+<h3 id="chuong-8">CHƯƠNG 8: THƯƠNG HIỆU – ĐÒN BẨY NÂNG BẠN QUA MỌI GIỚI HẠN</h3>
+<p>Đây là chương em đặc biệt yêu thích vì xây dựng thương hiệu cũng là một trong những lĩnh vực quan trọng của ngành Truyền thông số.</p>
+<p>Em nhận ra rằng kinh doanh không chỉ là bán được bao nhiêu sản phẩm trong ngày mà còn là làm thế nào để khách hàng nhớ đến mình.</p>
+<p>Một cửa hàng có thể thu hút khách hàng bằng giá rẻ hoặc chương trình giảm giá, nhưng để khách hàng quay lại nhiều lần thì cần có sự tin tưởng và bản sắc riêng.</p>
+<p>Theo em, thương hiệu không chỉ nằm ở logo, tên gọi hay màu sắc nhận diện. Thương hiệu còn được hình thành từ chất lượng sản phẩm, phong cách phục vụ, trải nghiệm mua sắm và cảm xúc mà khách hàng nhận được.</p>
+<p>Ví dụ, một thương hiệu thời trang hướng đến sự tối giản cần duy trì sự nhất quán từ thiết kế sản phẩm, hình ảnh quảng cáo, cách trang trí cửa hàng cho đến cách giao tiếp với khách hàng.</p>
+<p>Từ góc nhìn của một sinh viên Truyền thông số, em hiểu rằng xây dựng thương hiệu là một quá trình dài hạn. Người làm truyền thông cần biết cách kể câu chuyện thương hiệu, tạo ra những nội dung có giá trị và xây dựng mối quan hệ với cộng đồng khách hàng.</p>
+<p><strong>Bài học em rút ra:</strong> Đừng chỉ xây dựng một cửa hàng để bán hàng. Hãy xây dựng một thương hiệu để khách hàng có lý do nhớ đến và lựa chọn lâu dài.</p>
+<h3 id="chuong-9">CHƯƠNG 9: MARKETING – LẤY NGẮN NUÔI DÀI</h3>
+<p>Đây là chương gần gũi với ngành học của em nhất vì marketing là một phần quan trọng trong hoạt động truyền thông hiện đại.</p>
+<p>Em nhận thấy rằng một sản phẩm tốt chưa chắc tự động được khách hàng biết đến. Nếu không có hoạt động truyền thông phù hợp, cửa hàng có thể bỏ lỡ rất nhiều cơ hội tiếp cận khách hàng tiềm năng.</p>
+<p>Marketing không đơn giản chỉ là đăng hình sản phẩm hoặc chạy quảng cáo. Đó còn là việc tạo ra lý do để khách hàng quan tâm, tương tác và quyết định mua hàng.</p>
+<p>Ví dụ, cửa hàng có thể thực hiện video phối đồ, chương trình ưu đãi theo mùa, livestream giới thiệu sản phẩm hoặc hợp tác với những người sáng tạo nội dung phù hợp với nhóm khách hàng mục tiêu.</p>
+<p>Tuy nhiên, em cũng nhận thấy nếu một thương hiệu chỉ tập trung vào khuyến mãi thì khách hàng có thể hình thành thói quen chờ giảm giá. Điều này có thể ảnh hưởng đến lợi nhuận và hình ảnh thương hiệu.</p>
+<p>Vì vậy, người làm marketing cần cân bằng giữa mục tiêu doanh số trước mắt và mục tiêu xây dựng thương hiệu lâu dài.</p>
+<p><strong>Bài học em rút ra:</strong> Marketing không chỉ nhằm bán được hàng mà còn phải tạo dựng niềm tin, duy trì sự kết nối và xây dựng mối quan hệ lâu dài với khách hàng.</p>
+<h3 id="chuong-10">CHƯƠNG 10: PHÍA SAU CỬA SỔ TRƯNG BÀY</h3>
+<p>Đây là chương giúp em hiểu rõ rằng mở được một cửa hàng chỉ là bước khởi đầu, còn duy trì và phát triển cửa hàng mới là thử thách thực sự.</p>
+<p>Khi nhìn vào một cửa hàng thời trang, chúng ta thường chỉ thấy những bộ quần áo đẹp, không gian được trang trí bắt mắt và nhân viên tư vấn nhiệt tình. Nhưng phía sau đó là rất nhiều công việc cần được kiểm soát.</p>
+<p>Chẳng hạn, nếu không quản lý tốt hàng tồn kho, cửa hàng có thể bị tồn đọng những mẫu không bán được trong khi lại thiếu những sản phẩm đang có nhu cầu cao. Nếu không kiểm soát dòng tiền, doanh thu cao cũng chưa chắc đồng nghĩa với lợi nhuận tốt.</p>
+<p>Ngoài ra, thái độ phục vụ của nhân viên cũng ảnh hưởng trực tiếp đến trải nghiệm và khả năng quay lại của khách hàng.</p>
+<p>Em nhận thấy chương này mang đến một bài học rất thực tế: người chủ không thể chỉ tập trung vào việc bán hàng mà cần xây dựng một hệ thống vận hành ổn định.</p>
+<p>Liên hệ với ngành Truyền thông số, em nghĩ rằng hoạt động truyền thông có thể giúp thương hiệu thu hút khách hàng, nhưng chất lượng sản phẩm và dịch vụ mới là yếu tố quan trọng giúp giữ chân khách hàng.</p>
+<p><strong>Bài học em rút ra:</strong> Muốn doanh nghiệp phát triển lâu dài, người kinh doanh phải biết quản lý con người, sản phẩm, tài chính và quy trình chứ không chỉ biết bán hàng.</p>
+<h2 id="ket-luan">KẾT LUẬN – CẢM NHẬN SÂU SẮC NHẤT CỦA EM</h2>
+<p>Sau khi tìm hiểu cuốn sách <strong>“Kinh doanh thời trang” của tác giả Trần Viết Hưng</strong>, em nhận thấy đây không chỉ là một cuốn sách hướng dẫn cách mở và vận hành cửa hàng quần áo mà còn mang đến cho em nhiều bài học về tư duy kinh doanh, tinh thần khởi nghiệp và cách xây dựng giá trị lâu dài.</p>
+<p>Trước đây, em nghĩ kinh doanh thời trang chủ yếu cần có gu thẩm mỹ, biết lựa chọn quần áo đẹp và có khả năng bán hàng. Nhưng sau khi tìm hiểu nội dung cuốn sách, em nhận ra rằng để xây dựng một cửa hàng thành công cần rất nhiều yếu tố kết hợp với nhau. Đó là nghiên cứu thị trường, thấu hiểu khách hàng, lựa chọn sản phẩm, quản lý nguồn hàng, marketing và vận hành tài chính.</p>
+<p>Điều khiến em tâm đắc nhất chính là câu chuyện của tác giả. Từ một người không xuất thân từ ngành thời trang, anh đã từng bước học hỏi và xây dựng sự nghiệp bằng kinh nghiệm thực tế. Điều đó giúp em hiểu rằng không ai sinh ra đã có đầy đủ kiến thức để trở thành một người kinh doanh giỏi. Quan trọng là chúng ta có dám bắt đầu, có đủ kiên trì để vượt qua khó khăn và có sẵn sàng học hỏi từ những thất bại hay không.</p>
+<p>Đặc biệt, với tư cách là một sinh viên ngành Truyền thông số, em nhận thấy những kiến thức trong cuốn sách có mối liên hệ rất lớn với ngành học của mình. Truyền thông không chỉ giúp một thương hiệu được nhiều người biết đến mà còn góp phần tạo dựng hình ảnh, truyền tải giá trị và xây dựng niềm tin với khách hàng. Em hiểu rằng một chiến dịch truyền thông thành công cần gắn liền với chất lượng sản phẩm và trải nghiệm thực tế của người tiêu dùng.</p>
+<p>Sau khi đọc và tìm hiểu cuốn sách, em cảm thấy bản thân có thêm một góc nhìn mới về kinh doanh cũng như định hướng nghề nghiệp trong tương lai. Em muốn vận dụng những kiến thức đã học để có thể tham gia xây dựng các chiến dịch truyền thông thực tế, phát triển thương hiệu và nếu có cơ hội, em cũng mong muốn tự xây dựng một thương hiệu kinh doanh của riêng mình.</p>
+<p>Nếu phải chọn một thông điệp để nói về cuốn sách này, em sẽ chọn:</p>
+<p><strong>“Đừng chỉ kinh doanh những bộ quần áo đẹp, hãy kinh doanh bằng sự thấu hiểu khách hàng và tư duy xây dựng giá trị lâu dài.”</strong></p>
+<p>Đối với em, giá trị lớn nhất mà cuốn sách mang lại không nằm ở việc giúp người đọc kiếm được bao nhiêu tiền, mà nằm ở việc giúp người đọc hiểu được cách suy nghĩ và hành động của một người làm kinh doanh thực thụ.</p>
+<p>Em tin rằng những bài học từ cuốn sách sẽ không chỉ hữu ích trong lĩnh vực thời trang mà còn có thể trở thành hành trang quan trọng cho con đường học tập, làm việc và phát triển bản thân của em trong tương lai.</p>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="closing-inner">
+        <div class="section-kicker">Reading journal</div>
+        <h2>Kinh doanh<br>thời trang.</h2>
+        <p>Bài cảm nhận sách · Đào Huy Hoàng · 24030287</p>
+      </div>
+    </section>
+  </main>
+  <footer><span>© ĐÀO HUY HOÀNG · 24030287</span><strong>KINH DOANH THỜI TRANG — TRẦN VIẾT HƯNG</strong></footer>
+</body>
+</html>
